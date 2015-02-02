@@ -50,6 +50,10 @@ button.large_btn:hover{
 	color: #EF8319;
 }
 
+input {
+    width: 30px;
+    text-align: middle;
+}
 
 .container {
     padding: 0;
