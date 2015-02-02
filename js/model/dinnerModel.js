@@ -6,6 +6,9 @@ var DinnerModel = function() {
 
 
 	this.setNumberOfGuests = function(num) {
+		element.addEventListener("click", function, useCapture);
+		function setNumberOfGuests(num)
+
 		//TODO Lab 2
 	}
 
