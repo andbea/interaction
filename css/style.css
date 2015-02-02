@@ -1,0 +1,30 @@
+h1, p {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body {
+    background-color: Lightgray;
+}
+
+button.large_btn {
+	background-color: #EF8319;
+	 -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    border: solid;
+    border-width: 1px;
+    border-color: #FFC966;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+button.large_btn:hover{
+	background-color: white;
+	color: #EF8319;
+}
+
+#main {
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+
+}
