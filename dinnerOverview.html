@@ -22,20 +22,105 @@
 				<p><i>From the best chefs in the world directly into your kitchen</i></p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="overview">
 			<div class="col-md-1"></div>
 			<div class="col-md-3" id="exampleView">
-				<h3>My Dinner:</h3>
+				<h3 style="padding-top: 20px; padding-bottom: 0; margin-bottom: 0; margin-top:5px;">My Dinner:</h3>
 			</div>
-			<div>
-				<p id="numberOfGuests"> 0 </p>
+			<div class="col-md-1" style="padding-top:30px">
+				<p id="numberOfGuests"> 0 people</p>
 			</div>
 				
-			<div align="right" class="col-md-8" style="padding-top: 20px">
-				<button class="edit_btn" id="confirm">Go back and edit dinner</button>
+			<div align="right" class="col-md-7" style="padding-top:20px">
+				<button class="large_btn" id="confirm">Go back and edit dinner</button>
 			</div>
 		</div>
+		<div id="menu_table">
+					<div class="row">
+					  	<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="...">
+					      		<div class="caption">
+					       			<h3>Dish name</h3>
+					        		<p>Dish description</p>
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="...">
+					      		<div class="caption">
+					       			<h3>Dish name</h3>
+					        		<p>Dish description</p>
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="...">
+					      		<div class="caption">
+					       			<h3>Dish name</h3>
+					        		<p>Dish description</p>
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="...">
+					      		<div class="caption">
+					       			<h3>Dish name</h3>
+					        		<p>Dish description</p>
+					      		</div>
+					    	</div>
+					  	</div>
+					  	<div class="col-xs-3" id="sidebar">
+				<h3 id="text_padding">Dinner planner</h3>
+				<div id="exampleView">
+					
+					<div class="row" id="text_padding">
+						<div class="col-xs-4" >
+							People:
+						</div>
+						<div class="col-xs-2">
+							<p id="numberOfGuests"> 0 </p>
+						</div>
+						<div class="col-xs-2">
+		          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+						</div>
+						<div class="col-xs-2">
+							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</div>
+
+					</br>
+
+					<table>
+						<thead>
+							<tr>
+							    <th class="first">Dish name</th>
+							    <th class="last">Cost</th>
+						  	</tr>
+						</thead>
+						<tbody id="sidebar_content">
+						  	<tr>
+						  		<td class="first">Pending</td>
+						  		<td class="last">0.00</td>
+						  	</tr>
+						</tbody>
+					</table>
+					<hr>
+					<p id="sum">SEK 0.00</p>
+					</br>
+					<div class="center">
+						<button class="large_btn" id="confirm">Confirm Dinner</button>
+					</div>
+					</br>
+				</div>
+			</div>
+					</div>
+		</div>
 	</div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

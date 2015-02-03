@@ -75,23 +75,6 @@ button.large_btn:hover{
 	background-color: white;
 	color: #EF8319;
 }
-button.edit_btn{
-    background-color: #EF8319;
-    -moz-border-radius: 5px;
-    - webkit-border-radius: 5px;
-    border-radius: 6px;
-    border: solid;
-    border-width: 1px;
-    border-color: #FFC966;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 12;
-    color: white;
-}
-button.edit_btn:hover{
-    background-color: white;
-    color: #EF8319
-}
 
 #home_banner {
     background-color: rgba(239, 221, 111,0.6);
@@ -169,12 +152,17 @@ button.edit_btn:hover{
 } 
 
 #searchbar {
-    background: #EF8319;
+    background: #FFD273;
     border-bottom: solid;
     border-width: 2px;
     padding-left: 15px;
     padding-top: 5px;
     margin: 0;
+}
+#overview {
+    height: 100%;
+    border-style: solid;
+    background: #FFD273;
 }
 
 #text_padding {
