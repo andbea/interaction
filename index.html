@@ -63,15 +63,37 @@
 					<p id="sum">SEK 0.00</p>
 					</br>
 					<div class="center">
-						<button class="large_btn">Confirm Dinner</button>
+						<button class="large_btn" id="confirm">Confirm Dinner</button>
 					</div>
 					</br>
 				</div>
 			</div>
-			<div class="col-xs-9">
-
+			<div class="col-xs-9" id="searchbar">
+				<h2>Select<h2>
+				<hr>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="input-group">
+					      	<input type="text" class="form-control" placeholder="Search for...">
+					      	<span class="input-group-btn">
+					        	<button class="btn btn-default" type="button">Go!</button>
+					      	</span>
+					    </div><!-- /input-group -->
+					</div>
+					<div class="col-xs-6">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							    Select course
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main course</a></li>
+							    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-
 		</div>
 	</div>
 

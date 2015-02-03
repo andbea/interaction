@@ -1,6 +1,10 @@
 h1, p {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+p {
+	font-size: 12;
+}
 body {
     background-color: white;
     height: 100%;
@@ -43,6 +47,7 @@ button.large_btn {
     border-color: #FFC966;
     padding: 10px;
     font-weight: bold;
+    font-size: 12;
     color: white;
 }
 button.large_btn:hover{
@@ -50,32 +55,20 @@ button.large_btn:hover{
 	color: #EF8319;
 }
 
-input {
-    width: 30px;
-    text-align: middle;
-}
-
-.container {
-    padding: 0;
-    margin: 0;
-    width: 98%;
-}
-
 #banner {
     background: Lightgray;
-    border-bottom: solid;
+    border-style: solid;
     border-width: 2px
 }
 
 #main {
     height: 100%;
-    border-bottom: solid;
+    border-style: solid;
 }
 
 #sidebar {
     border-right-style: solid; 
     height: 100%;
-    margin-left: 20px;
     padding: 0;
 }
 
@@ -89,3 +82,9 @@ input {
     text-align: right;
     padding-right: 10px;
 } 
+
+#searchbar {
+    background: #EF8319;
+    border-bottom: solid;
+    border-width: 2px
+}
