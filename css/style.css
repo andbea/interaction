@@ -107,6 +107,26 @@ button.edit_btn:hover{
 	padding: 10px; 
 }
 
+.remove {
+	 display:block;
+    width:25px;
+    height:25px;
+    line-height:24px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: #ff2f2f;
+    font-size: 8px;
+    font-weight: bold;
+}
+.remove:hover {
+    color: #ff2f2f;
+    background: white;
+    border: 1px solid #ff2f2f;
+}
+
 .center {
     margin-left: auto; 
     margin-right: auto; 
