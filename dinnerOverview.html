@@ -1,136 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 
-  </head>
-  <body>
-	<div class="container">
-		<div class="row" id="banner">
-			<div class="col-md-1"></div>
-			<div class="col-md-3">
-				<h1>HOMELETTE</h1>
-			</div>
-			<div class="col-md-8" style="padding-top: 3%">
-				<p><i>From the best chefs in the world directly into your kitchen</i></p>
-			</div>
-		</div>
-		<div class="row" id="overview">
-			<div class="col-md-1"></div>
-			<div class="col-md-3" id="exampleView">
-				<h3 style="padding-top: 20px; padding-bottom: 0; margin-bottom: 0; margin-top:5px;">My Dinner:</h3>
-			</div>
-			<div class="col-md-1" style="padding-top:30px">
-				<p id="numberOfGuests"> 0 people</p>
-			</div>
-				
-			<div align="right" class="col-md-7" style="padding-top:20px">
-				<button class="large_btn" id="confirm">Go back and edit dinner</button>
-			</div>
-		</div>
-		<div id="menu_table">
-					<div class="row">
-					  	<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-xs-3" id="sidebar">
-				<h3 id="text_padding">Dinner planner</h3>
-				<div id="exampleView">
-					
-					<div class="row" id="text_padding">
-						<div class="col-xs-4" >
-							People:
-						</div>
-						<div class="col-xs-2">
-							<p id="numberOfGuests"> 0 </p>
-						</div>
-						<div class="col-xs-2">
-		          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-						</div>
-						<div class="col-xs-2">
-							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-						</div>
-					</div>
-
-					</br>
-
-					<table>
-						<thead>
-							<tr>
-							    <th class="first">Dish name</th>
-							    <th class="last">Cost</th>
-						  	</tr>
-						</thead>
-						<tbody id="sidebar_content">
-						  	<tr>
-						  		<td class="first">Pending</td>
-						  		<td class="last">0.00</td>
-						  	</tr>
-						</tbody>
-					</table>
-					<hr>
-					<p id="sum">SEK 0.00</p>
-					</br>
-					<div class="center">
-						<button class="large_btn" id="confirm">Confirm Dinner</button>
-					</div>
-					</br>
+	  </head>
+	  <body>
+		<div class="container">
+			<div class="row" id="banner">
+				<div class="col-md-1"></div>
+				<div class="col-md-3">
+					<h1>HOMELETTE</h1>
+				</div>
+				<div class="col-md-8" style="padding-top: 3%">
+					<p><i>From the best chefs in the world directly into your kitchen</i></p>
 				</div>
 			</div>
-					</div>
+			<div class="row" id="overview">
+				<div class="col-md-1"></div>
+				<div class="col-md-3" id="exampleView">
+					<h3 style="padding-top: 20px; padding-bottom: 0; margin-bottom: 0; margin-top:5px;">My Dinner:</h3>
+				</div>
+				<div class="col-md-1" style="padding-top:30px">
+					<p id="numberOfGuests"> 0 people</p>
+				</div>
+					
+				<div align="right" class="col-md-7" style="padding-top:20px">
+					<button class="large_btn" id="confirm">Go back and edit dinner</button>
+				</div>
+			</div>
+			<div id="menu_table" >
+						<div class="row">
+						  	<div class="col-sm-3">
+						   	 	<div class="thumbnail">
+						      		<img src="images/icecream.jpg" alt="...">
+						      		<div class="caption">
+						       			<h3>Dish name</h3>
+						        		<p>Dish description</p>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="col-sm-3">
+						   	 	<div class="thumbnail">
+						      		<img src="images/icecream.jpg" alt="...">
+						      		<div class="caption">
+						       			<h3>Dish name</h3>
+						        		<p>Dish description</p>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="col-sm-3">
+						   	 	<div class="thumbnail">
+						      		<img src="images/icecream.jpg" alt="...">
+						      		<div class="caption">
+						       			<h3>Dish name</h3>
+						        		<p>Dish description</p>
+						      		</div>
+						    	</div>
+						  	</div>
+						  	<div class="col-xs-3" id="total_cost" > 
+								<h3 id="text_padding">Total:</h3>
+								<div id="exampleView">
+
+								</div>
+							</div>
+						</div>
+			</div>
+			<div class="row" align="center" id="print">
+				<button class="large_btn" id="confirm">Print Full Recipe</button>
+			</div>
 		</div>
-	</div>
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	    <!-- jQuery -->
+	    <script src="https://code.jquery.com/jquery.js"></script>
+	    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+	    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-  </body>
-</html>
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+	  </body>
+	</html>

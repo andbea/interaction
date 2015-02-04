@@ -164,6 +164,15 @@ button.large_btn:hover{
     border-style: solid;
     background: #FFD273;
 }
+#total_cost{
+    border-left: dashed;
+    border-color: grey;
+}
+
+#print{
+    border-top: dashed;
+    padding-top: 30px;
+}
 
 #text_padding {
 	padding-left: 20px;
