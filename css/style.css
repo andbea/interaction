@@ -119,13 +119,6 @@ button.large_btn:hover{
 	overflow-x: hidden;
 	padding: 10px; 
 }
-#preparation{
-    display: block;
-    width: 100%;
-    height: 450px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 
 .remove {
 	 display:block;
