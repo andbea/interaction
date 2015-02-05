@@ -1,25 +1,29 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
+
+	var numberOfGuests = 0;
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
-
-	this.setNumberOfGuests = function(num) {
-		var qty = document.getElementById('qty').value;
-		var new_qty = parseInt(qty, 10)+ val;
-
-		if (new_qty < 0) {
-			new_qty = 0;
-		}	
-		document.getElementById('qty').value = new_qty;
-		return new_qty;
+	this.setNumberOfGuests = function() {
+		var num = 1;
 		//TODO Lab 2
+		alert(num);
+		numberOfGuests = numberOfGuests + num;
+		
+		if(numberOfGuests < 0) {
+			numberOfGuests = 0;
+		}
+
+		document.getElementById('numberOfGuests').value = numberOfGuests;
+		return numberOfGuests;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
+		numberOfGuests = document.getElementById('numberOfGuests').value.parseInt();
 	}
 
 	//Returns the dish that is on the menu for selected type 
