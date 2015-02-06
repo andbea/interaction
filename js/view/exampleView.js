@@ -11,9 +11,13 @@ var ExampleView = function (container, model) {
 	this.confirmDishButton = container.find("#confirmDish");
 	this.confirmDinnerButton = container.find("#confirmDinner");
 	this.fullRecipeButton = container.find("#fullRecipe");
+
+	this.menuTable = container.getElementById("menu_table");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.dishPrice.html(model.getTotalMenuPrice());
+	var texten = model.populateDishTable();
+	this.menuTable.innerHTML = "<p>Hej</p>";
 
 	model.addObserver(this);
 

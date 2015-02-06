@@ -79,6 +79,43 @@ var DinnerModel = function() {
 		return price;
 	}
 
+	this.populateDishTable = function() {
+		var html = '<div class="row">';
+		var i;
+		var numberOfRows = Math.round(dishes.length/4);
+		for(i = 0; i < numberOfRows; i++) {
+			html = html + '<div class="col-sm-3"><div class="thumbnail">' + this.populateDishRow(i) + '</div></div>';
+		}
+		return html + '</div>';
+
+	}
+	this.populateDishRow = function(row_number) {
+		var html = "";
+		var i;
+		var start = 0 + (row_number*4);
+		var end = (row_number+1)*4;
+		if(end > dishes.length) {
+			end = dishes.length-1;
+		}
+		for(i = start; i < end; i++) {
+			html = html + '<img src="images/' + dishes[i]["image"] + '" alt="...">';
+			html = html + '<div class="caption"><h3>' +  dishes[i]["name"] + '</h3>';
+			var desc = dishes[i]["description"];
+			html = html + '<p>' + desc + '</p></div>';
+		}
+		return html;
+	}
+
+	this.populateDishDetails = function() {
+
+	}
+	this.populateMenuPreperation = function() {
+
+	}
+	this.populateOverview = function() {
+
+	}
+
 	this.getDishPrice = function(id) {
 		var i, price = 0;
 		var dish = getDish(id);
