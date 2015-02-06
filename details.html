@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+  </head>
+  <body>
+	<div class="container">
+		<div class="row" id="banner">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<h1>HOMELETTE</h1>
+			</div>
+			<div class="col-md-8" style="padding-top: 3%">
+				<p><i>From the best chefs in the world directly into your kitchen</i></p>
+			</div>
+		</div>
+
+		<div id="exampleView">
+			<div class="row" id="main">
+				<div class="col-xs-3" id="sidebar">
+					<h3 id="text_padding">Dinner planner</h3>
+						
+						<div class="row" id="text_padding">
+							<div class="col-xs-3" style="margin-top: 5px;">
+								People:
+							</div>
+							<div class="col-xs-2" style="margin-top: 5px;">
+								<p id='numberOfGuests'>0</p>
+							</div>
+							<div class="col-xs-2">
+			          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+							</div>
+							<div class="col-xs-2">
+								<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+							</div>
+							</div>
+
+						</br>
+
+						<table>
+							<thead>
+								<tr>
+								    <th class="first">Dish</th>
+								    <th>Name</th>
+								    <th>Cost</th>
+								    <th class="last"> </th>
+							  	</tr>
+							</thead>
+							<tbody id="sidebar_content">
+							  	<tr>
+							  		<td> </td>
+							  		<td>Pending</td>
+							  		<td>0.00</td>
+							  		<td class="last"></td>
+							  	</tr>
+							</tbody>
+						</table>
+						<hr>
+						<p id="sum">SEK 0.00</p>
+						</br>
+						<div class="center">
+							<button class="large_btn" id="confirm">Confirm Dinner</button>
+						</div>
+						</br>
+				</div>
+				<div class="col-xs-9" id="menu_screen">
+					<div id="details">
+						<div class="row">
+						  	<div class="col-xs-6" style="padding: 30px">
+						  		<h2 id="dishTitle">Lasagne</h2>
+						      	<img src="images/icecream.jpg" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
+						      	<p id="dishDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
+						  	</div>
+						  	<div class="col-xs-6" style="padding-left: 30px; padding-top: 30px;">
+						  		<div id="ingredientsWindow">
+							   	 	<h3>Ingredients for 4 people</h3>
+							   	 	<hr>
+							   	 	<div id="ingredients"></div>
+							   	 	<hr>
+							   	 	<div class="row">
+							   	 		<div class="col-sm-9">
+							   	 			<button class="large_btn" id="confirmDish">Confirm Dish</button>
+							   	 		</div>
+							   	 		<div class="col-sm-3">
+							   	 			<p id="cost">0.00 SEK</p>
+							   	 		</div>
+							   	 	</div>
+							   	 </div>
+						  	</div>
+						</div>
+						<h3>Preperation</h3>
+						<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+  </body>
+</html>

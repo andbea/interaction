@@ -120,6 +120,12 @@ button.large_btn:hover{
 	padding: 10px; 
 }
 
+#menu_overview {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
 .remove {
 	 display:block;
     width:25px;
@@ -159,10 +165,19 @@ button.large_btn:hover{
     padding-top: 5px;
     margin: 0;
 }
+#ingredientsWindow { 
+    width: 98%;
+    padding: 10px;
+    background: #FFD273;
+    border: solid;
+    border-width: 2px;
+}
+
 #overview {
     height: 100%;
     border-style: solid;
     background: #FFD273;
+    padding-bottom: 10px;
 }
 #total_cost{
     border-left: dashed;
@@ -172,6 +187,7 @@ button.large_btn:hover{
 #print{
     border-top: dashed;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #text_padding {

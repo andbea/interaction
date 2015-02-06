@@ -6,6 +6,11 @@ var ExampleView = function (container, model) {
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
+	this.createButton = container.find("#create");
+	this.goBackButton = container.find("#goBack");
+	this.confirmDishButton = container.find("#confirmDish");
+	this.confirmDinnerButton = container.find("#confirmDinner");
+	this.fullRecipeButton = container.find("#fullRecipe");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 
@@ -14,16 +19,4 @@ var ExampleView = function (container, model) {
 	this.update = function(){
 		this.numberOfGuests.html(model.getNumberOfGuests());
 	}
-}
- 
-//ExampleViewController Object constructor
-var ExampleViewController = function(view, model) {
- 
- 	view.plusButton.click(function(){
- 		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
- 	});
- 
- 	view.minusButton.click(function(){
- 		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
- 	});
 }

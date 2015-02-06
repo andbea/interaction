@@ -1,7 +1,7 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
 
-	var numberOfGuests = 3;
+	var numberOfGuests = 0;
 
 	// This menu variable is filled all the ids of the dishes selected from the menu.
 	var menu = [];
@@ -13,6 +13,9 @@ var DinnerModel = function() {
 
 	this.addObserver = function(observer) {
 		obs_list.push(observer);	
+	}
+	this.removeObserver = function() {
+		obs_list.splice(0, 1);	
 	}
 
 	this.notifyObservers = function(obj) {

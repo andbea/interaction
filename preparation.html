@@ -13,73 +13,77 @@
 	  </head>
 	  <body>
 		<div class="container" id="main">
-			<div class="row" id="banner">
-				<div class="col-md-1"></div>
-				<div class="col-md-3">
-					<h1>HOMELETTE</h1>
+			<div id="exampleView">
+				<div class="row" id="banner">
+					<div class="col-md-1"></div>
+					<div class="col-md-3">
+						<h1>HOMELETTE</h1>
+					</div>
+					<div class="col-md-8" style="padding-top: 3%">
+						<p><i>From the best chefs in the world directly into your kitchen</i></p>
+					</div>
 				</div>
-				<div class="col-md-8" style="padding-top: 3%">
-					<p><i>From the best chefs in the world directly into your kitchen</i></p>
+				<div class="row" id="overview">
+					<div class="col-md-1"></div>
+					<div class="col-md-3" id="exampleView">
+						<h3 style="padding-top: 20px; margin-bottom: 0; margin-top:5px;">My Dinner:</h3>
+					</div>
+					<div class="col-md-1" style="padding-top:25px">
+						<p id="numberOfGuests"> </p>
+					</div>
+					<div class="col-md-2" style="padding-top:25px">
+						<p> People</p>
+					</div>
+					<div align="right" class="col-md-5" style="padding-top:10px">
+						<button class="large_btn" id="goBack">Go back and edit dinner</button>
+					</div>
 				</div>
-			</div>
-			<div class="row" id="overview">
-				<div class="col-md-1"></div>
-				<div class="col-md-3" id="exampleView">
-					<h3 style="padding-top: 20px; padding-bottom: 0; margin-bottom: 0; margin-top:5px;">My Dinner:</h3>
-				</div>
-				<div class="col-md-3" style="padding-top:5px">
-					<p id="numberOfGuests"><h2> 0 people</h2></p>
-				</div>
-					
-				<div align="right" class="col-md-5" style="padding-top:10px">
-					<button class="large_btn" id="confirm">Go back and edit dinner</button>
-				</div>
-			</div>
-			<div id="menu_table" style="padding-bottom:0" id="main">
-				<div class="row">
-					<div class="col-sm-3">
-				   	 	<div class="thumbnail">
-				      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-				    	</div>
-				  	</div>
-				  	<div class="col-sm-3">
-						<p><h2>Meal</h2></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				  	</div>
-				  	<div class="col-sm-6">
-				  		<p><b>Preparation</b></p>
-				  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-				   	 	<div class="thumbnail">
-				      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-				    	</div>
-				    </div>
-				  	<div class="col-sm-3">
-						<p><h2>Meal</h2></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				  	</div>
-				  	<div class="col-sm-6">
-				  		<p><b>Preparation</b></p>
-				  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-				   	 	<div class="thumbnail">
-				      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-				    	</div>
-				  	</div>
-				  	<div class="col-sm-3">
-						<p><h2>Meal</h2></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				  	</div>
-				  	<div class="col-sm-6">
-				  		<p><b>Preparation</b></p>
-				  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  	</div>
+				<div id="menu_table" style="padding-bottom:0" id="main">
+					<div class="row">
+						<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+					    	</div>
+					  	</div>
+					  	<div class="col-sm-3">
+							<p><h2>Meal</h2></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  	</div>
+					  	<div class="col-sm-6">
+					  		<p><b>Preparation</b></p>
+					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					  	</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+					    	</div>
+					    </div>
+					  	<div class="col-sm-3">
+							<p><h2>Meal</h2></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  	</div>
+					  	<div class="col-sm-6">
+					  		<p><b>Preparation</b></p>
+					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					  	</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+					   	 	<div class="thumbnail">
+					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+					    	</div>
+					  	</div>
+					  	<div class="col-sm-3">
+							<p><h2>Meal</h2></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  	</div>
+					  	<div class="col-sm-6">
+					  		<p><b>Preparation</b></p>
+					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					  	</div>
+					</div>
 				</div>
 			</div>
 		</div>
