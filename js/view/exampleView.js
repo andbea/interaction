@@ -11,6 +11,9 @@ var ExampleView = function (container, model) {
 
 	model.addObserver(this);
 
+	this.update = function(){
+		this.numberOfGuests.html(model.getNumberOfGuests());
+	}
 }
  
 //ExampleViewController Object constructor
