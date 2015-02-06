@@ -9,9 +9,18 @@ var ExampleView = function (container, model) {
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 
-	this.plusButton.click( model.setNumberOfGuests(1) );
-
-	this.minusButton.click( model.setNumberOfGuests(-1) );
+	model.addObserver(this);
 
 }
  
+//ExampleViewController Object constructor
+var ExampleViewController = function(view, model) {
+ 
+ 	view.plusButton.click(function(){
+ 		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
+ 	});
+ 
+ 	view.minusButton.click(function(){
+ 		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
+ 	});
+}
