@@ -7,20 +7,12 @@ var ExampleViewController = function(view, model) {
  	view.minusButton.click(function(){
  		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
  	});
-
- 	view.createButton.click(function(){
- 		window.location.href = "index.html";
- 	});
- 	view.goBackButton.click(function(){
+ 	view.goToMainButton.click(function(){
  		window.location.href = "index.html";
  	});
  	view.confirmDinnerButton.click(function(){
  		window.location.href = "dinnerOverview.html";
  	});
- 	view.confirmDishButton.click(function(){
- 		window.location.href = "index.html";
- 	});
-
  	view.fullRecipeButton.click(function(){
  		window.location.href = "preparation.html";
  	});
