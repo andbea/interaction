@@ -13,6 +13,10 @@ var ExampleViewController = function(view, model) {
  	view.confirmDinnerButton.click(function(){
  		window.location.href = "dinnerOverview.html";
  	});
+ 	view.goToMainButton.click(function(){
+ 		window.location.href = "index.html";
+ 	});
+
  	view.fullRecipeButton.click(function(){
  		window.location.href = "preparation.html";
  	});
