@@ -198,3 +198,13 @@ hr {
 #text_padding {
 	padding-left: 20px;
 }
+
+#menu_image  {
+    width: 95%;
+    height: 160px;
+    min-height: 40px;
+    min-width: 40px;
+}
+#menu_block {
+    height: 330px;
+}

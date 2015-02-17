@@ -80,17 +80,19 @@ var DinnerModel = function() {
 	}
 
 	this.populateDishTable = function() {
-		var html = '<div class="row">';
+		var html = '';
 		var i;
 		var numberOfRows = Math.round(dishes.length/4);
 		for(i = 0; i < numberOfRows; i++) {
-			html = html + '<div class="col-sm-3"><div class="thumbnail">' + this.populateDishRow(i) + '</div></div>';
+			html = html + '<div class="row">' 
+						+ 	this.populateDishRow(i) 
+						+ '</div>';
 		}
-		return html + '</div>';
+		return html;
 
 	}
 	this.populateDishRow = function(row_number) {
-		var html = "";
+		var html = '';
 		var i;
 		var start = 0 + (row_number*4);
 		var end = (row_number+1)*4;
@@ -98,13 +100,27 @@ var DinnerModel = function() {
 			end = dishes.length-1;
 		}
 		for(i = start; i < end; i++) {
-			html = html + '<img src="images/' + dishes[i]["image"] + '" alt="...">';
-			html = html + '<div class="caption"><h3>' +  dishes[i]["name"] + '</h3>';
-			var desc = dishes[i]["description"];
-			html = html + '<p>' + desc + '</p></div>';
+			var text = this.smallDesc(dishes[i]["description"]);
+			html = html + '<div class="col-sm-3">'
+						+	'<div id="menu_block" class="thumbnail">' 
+						+ 		'<img id="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
+						+ 		'<div class="caption">' 
+						+ 			'<h3>' +  dishes[i]["name"] + '</h3>'
+						+ 			'<p>' + text + '</p>'
+						+ 		'</div>'
+						+	'</div>'
+						+ '</div>';
 		}
 		return html;
 	}
+
+	this.smallDesc = function(text) {
+		if(text.length >= 50) {
+			text = text.substring(0, 51) + '...';
+		}
+		return text;
+	}
+
 
 	this.populateDishDetails = function() {
 
