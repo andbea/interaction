@@ -27,56 +27,56 @@
 			<div class="row" id="main">
 				<div class="col-xs-3" id="sidebar">
 					<h3 id="text_padding">Dinner planner</h3>
-						
-						<div class="row" id="text_padding">
-							<div class="col-xs-3" style="margin-top: 5px;">
-								People:
-							</div>
-							<div class="col-xs-2" style="margin-top: 5px;">
-								<p id='numberOfGuests'>0</p>
-							</div>
-							<div class="col-xs-2">
-			          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-							</div>
-							<div class="col-xs-2">
-								<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-							</div>
-							</div>
-
-						</br>
-
-						<table>
-							<thead>
-								<tr>
-								    <th class="first">Dish</th>
-								    <th>Name</th>
-								    <th>Cost</th>
-								    <th class="last"> </th>
-							  	</tr>
-							</thead>
-							<tbody id="sidebar_content">
-							  	<tr>
-							  		<td> </td>
-							  		<td>Pending</td>
-							  		<td>0.00</td>
-							  		<td class="last"></td>
-							  	</tr>
-							</tbody>
-						</table>
-						<hr>
-						<p id="sum">SEK 0.00</p>
-						</br>
-						<div class="center">
-							<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
+		
+					<div class="row" id="text_padding">
+						<div class="col-xs-3" style="margin-top: 5px;">
+							People:
 						</div>
-						</br>
+						<div class="col-xs-2" style="margin-top: 5px;">
+							<p id='numberOfGuests'>0</p>
+						</div>
+						<div class="col-xs-2">
+		          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+						</div>
+						<div class="col-xs-2">
+							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</div>
+
+					</br>
+
+					<table>
+						<thead>
+							<tr>
+							    <th class="first">Dish</th>
+							    <th>Name</th>
+							    <th>Cost</th>
+							    <th class="last"> </th>
+						  	</tr>
+						</thead>
+						<tbody id="sidebar_content">
+						  	<tr>
+						  		<td> </td>
+						  		<td>Pending</td>
+						  		<td>0.00</td>
+						  		<td class="last"></td>
+						  	</tr>
+						</tbody>
+					</table>
+					<hr>
+					<p id="sum">SEK 0.00</p>
+					</br>
+					<div class="center">
+						<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
+					</div>
+					</br>
 				</div>
 				<div class="col-xs-9" id="detailsView">
 						<div class="row">
 						  	<div class="col-xs-6" style="padding: 30px">
-						  		<h2 id="dishTitle">Lasagne</h2>
-						      	<img src="images/icecream.jpg" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
-						      	<p id="dishDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
+						  		<h2 id="dishTitle"></h2>
+						      	<img id="dishImage" src="" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
+							   	<button class="large_btn" id="goToMain">Return to menu</button>
 						  	</div>
 						  	<div class="col-xs-6" style="padding-left: 30px; padding-top: 30px;">
 						  		<div id="ingredientsWindow">
@@ -84,12 +84,6 @@
 							   	 	<hr>
 							   	 	<table style="background: none">
 										<tbody id="ingredients_content">
-										  	<tr>
-										  		<td id="amount">1/2 tbsp</td>
-										  		<td id="name">Meat</td>
-										  		<td id="currency">SEK</td>
-										  		<td id="price">100.00</td>
-										  	</tr>
 										</tbody>
 									</table>
 							   	 	<hr>
@@ -104,8 +98,16 @@
 							   	 </div>
 						  	</div>
 						</div>
+<<<<<<< HEAD
+						<div style="padding: 30px">
+							<h3>Preperation</h3>
+							<p id="dishDetails"></p>
+						</div>
+					</div>
+=======
 						<h3>Preperation</h3>
 						<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
+>>>>>>> origin/master
 				</div>
 			</div>
 		</div>

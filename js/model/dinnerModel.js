@@ -32,6 +32,16 @@ var DinnerModel = function() {
 		return numberOfGuests;
 	}
 
+
+	//function that returns a dish of specific ID
+	this.getDish = function (id) {
+	  	for(key in dishes){
+			if(dishes[key].id == id) {
+				return dishes[key];
+			}
+		}
+	}
+
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
@@ -113,6 +123,85 @@ var DinnerModel = function() {
 		}
 		return html;
 	}
+	this.getIngredientsTable = function(id) {
+		var html = '';
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		var ingredients = dish["ingredients"];
+		var cost = 0;
+		for(var i = 0; i < ingredients.length; i++) {
+			html = html + '<tr>'
+						+	'<td id="quantity">' + ingredients[i]["quantity"] +'</td>' 
+						+	'<td id="unit">' + ingredients[i]["unit"] +'</td>' 
+						+	'<td id="name">' + ingredients[i]["name"] +'</td>' 
+						+	'<td id="name">' + 'SEK' +'</td>' 
+						+	'<td id="price">' + ingredients[i]["price"] +'</td>' 
+						+ '</tr>';
+			cost = cost + ingredients[i]["price"];
+		}
+		$("#cost").html(cost.toString() + " SEK");
+		return html;
+	}
+
+
+	this.getMenu = function(id_list) {
+		var html = '';
+		var dish;
+		var id;
+		for(var a = 0; a < id_list.length; a++) {
+			id = id_list[a];
+			for(key in dishes){
+				if(dishes[key].id == id) {
+					dish = dishes[key];
+				}
+			}
+			var text = this.smallDesc(dish["description"]);
+			html = html + '<div class="col-sm-3">'
+						+	'<div id="menu_block" class="thumbnail">' 
+						+ 		'<img id="menu_image" src="images/' + dish["image"] + '" alt="...">'
+						+ 		'<div class="caption">' 
+						+ 			'<h3>' +  dish["name"] + '</h3>'
+						+ 			'<p>' + text + '</p>'
+						+ 		'</div>'
+						+	'</div>'
+						+ '</div>';
+		}
+		return html;
+	}
+
+	this.getMenuPreperation = function(id_list) {
+		var html = '';
+		var dish;
+		var id;
+		for(var a = 0; a < id_list.length; a++) {
+			id = id_list[a];
+			for(key in dishes){
+				if(dishes[key].id == id) {
+					dish = dishes[key];
+				}
+			}
+			var text = this.smallDesc(dish["description"]);
+			html = html + '<div class="row">'
+						+	'<div class="col-sm-3">' 
+						+		'<div class="thumbnail">'
+					    + 			'<img id="dishImage" src="images/' + dish["image"] + '" alt="..." style="width:100px;height:100px">'
+					    +		'</div>' 
+					    +	'</div>'
+					    +	'<div class="col-sm-3">'
+					    + 		'<h2>' + dish["name"] + '</h2>'
+					    +	'</div>'
+						+ 	'<div class="col-sm-6">'
+					  	+		'<p><b>Preparation</b></p>'
+					  	+		'<p>' + dish["description"] + '</p>'
+					  	+	'</div>'
+						+ '</div>';
+		}
+		return html;
+	}
 
 	this.smallDesc = function(text) {
 		if(text.length >= 50) {
@@ -121,6 +210,35 @@ var DinnerModel = function() {
 		return text;
 	}
 
+	this.getDishTitle = function(id) {
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		return dish["name"];
+	}
+
+	this.getDishImage = function(id) {
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		return 'images/' + dish["image"];
+	}
+
+	this.getDishDetails = function(id) {
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		return dish["description"];
+	}
 
 	this.populateDishDetails = function() {
 
@@ -176,7 +294,7 @@ var DinnerModel = function() {
 		var found = true;
 		if(filter){
 			found = false;
-			$.each(dish.ingredients,function(index,ingredient) {
+			$.each(dish.ingredients, function(index,ingredient) {
 				if(ingredient.name.indexOf(filter)!=-1) {
 					found = true;
 				}
@@ -189,14 +307,6 @@ var DinnerModel = function() {
 	  });	
 	}
 
-	//function that returns a dish of specific ID
-	this.getDish = function (id) {
-	  for(key in dishes){
-			if(dishes[key].id == id) {
-				return dishes[key];
-			}
-		}
-	}
 
 
 	// the dishes variable contains an array of all the 
