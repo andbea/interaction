@@ -27,7 +27,7 @@
 		<div id="exampleView">
 			<div class="row" id="main">
 			<!--start of side bar-->
-				<div class="col-xs-3" id="sidebar">
+				<div class="col-xs-3" id="sidebarView" >
 					<h3 id="text_padding">Dinner planner</h3>
 						
 						<div class="row" id="text_padding">
@@ -86,7 +86,7 @@
 				</div>
 			<!-- end of side bar-->
 			<!--start of main site-->
-				<div class="col-xs-9" id="menu_screen">
+				<div class="col-xs-9" id="menuView">
 					<div id="searchbar">
 						<h3 style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 5px;">Select<h3>
 						<hr style="margin: 5px;">
@@ -113,10 +113,45 @@
 							</div>
 						</div>
 					</div>
-					<div id="menu_table">
-					</div>
+					<div id="menu_table"> </div>
 				</div>
-			<!--end of main site-->
+		<!--end of main site-->
+				<div class="col-xs-9" id="detailsView">
+				<div class="row">
+				  	<div class="col-xs-6" style="padding: 30px">
+				  		<h2 id="dishTitle">Lasagne</h2>
+				      	<img src="images/icecream.jpg" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
+				      	<p id="dishDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
+				  	</div>
+				  	<div class="col-xs-6" style="padding-left: 30px; padding-top: 30px;">
+				  		<div id="ingredientsWindow">
+					   	 	<h3>Ingredients for 4 people</h3>
+					   	 	<hr>
+					   	 	<table style="background: none">
+								<tbody id="ingredients_content">
+								  	<tr>
+								  		<td id="amount">1/2 tbsp</td>
+								  		<td id="name">Meat</td>
+								  		<td id="currency">SEK</td>
+								  		<td id="price">100.00</td>
+								  	</tr>
+								</tbody>
+							</table>
+					   	 	<hr>
+					   	 	<div class="row">
+					   	 		<div class="col-sm-9">
+					   	 			<button class="large_btn" id="confirmDish">Confirm Dish</button>
+					   	 		</div>
+					   	 		<div class="col-sm-3">
+					   	 			<p id="cost">0.00 SEK</p>
+					   	 		</div>
+					   	 	</div>
+					   	 </div>
+				  	</div>
+				</div>
+				<h3>Preperation</h3>
+				<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
+				</div>
 			</div>
 	
 
