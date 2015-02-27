@@ -112,7 +112,7 @@ var DinnerModel = function() {
 		for(i = start; i < end; i++) {
 			var text = this.smallDesc(dishes[i]["description"]);
 			html = html + '<div class="col-sm-3">'
-						+	'<div id="menu_block" class="thumbnail">' 
+						+	'<div id="menu_block" class="thumbnail" style="cursor: pointer;">' 
 						+ 		'<img id="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
 						+ 		'<div class="caption">' 
 						+ 			'<h3>' +  dishes[i]["name"] + '</h3>'
