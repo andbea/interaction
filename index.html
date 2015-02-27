@@ -12,7 +12,7 @@
 
   	</head>
 <body>
-	<div id="firstView" class="container" style="border-style: solid; position: relative;">
+	<div id="firstView" class="container" style="display: block; border-style: solid; position: relative;">
 	  	<div id="bg">
 	  		<img src="images/home.jpg" alt="">
 		</div>
@@ -104,7 +104,7 @@
 			</div>
 			</br>
 			<div class="center">
-				<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
+				<button class="large_btn" id="confirmDinner" disabled>Confirm Dinner</button>
 			</div>
 			</br>
 		</div>
@@ -112,9 +112,9 @@
 	<!--start of main site-->
 		<div class="col-xs-9" id="menuView" style= "display: none;">
 			<div id="searchbar">
-				<h3 style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 5px;">Select<h3>
+				<h3 style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 5px;">Select</h3>
 				<hr style="margin: 5px;">
-				<div class="row">
+				<div class="row" style="padding: 10px;">
 					<div class="col-xs-6">
 						<div class="input-group">
 					      	<input type="text" class="form-control" placeholder="Search for...">
@@ -139,6 +139,7 @@
 			</div>
 			<div id="menu_table"> </div>
 		</div>
+	</div>
 <!--end of main site-->
 		<div class="col-xs-9" id="detailsView" style= "display: none;">
 			<div class="row">

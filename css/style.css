@@ -163,7 +163,7 @@ hr {
 }
 
 #searchbar {
-    display: none;
+    display: block;
     background: #FFD273;
     border-bottom: solid;
     border-width: 2px;

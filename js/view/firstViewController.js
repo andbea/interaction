@@ -2,8 +2,8 @@
 var FirstViewController = function(view, model) {
  	view.goToMainButton.click(function(){
  		$("#firstView").css("display", "none");
- 		$("#sidebarView").css("display", "inline");
- 		$("#banner").css("display", "inline");
- 		$("#menuView").css("display", "inline");
+ 		$("#sidebarView").css("display", "block");
+ 		$("#banner").css("display", "block");
+ 		$("#menuView").css("display", "block");
  	});
 }
