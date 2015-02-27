@@ -7,13 +7,13 @@ var ExampleView = function (container, model) {
 	this.dishPrice = container.find("#dishPrice");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-	this.confirmDishButton = container.find("#confirmDish");
 	this.confirmDinnerButton = container.find("#confirmDinner");
-
-	this.menuTable = container.find("#menu_table");
+	this.dishTitle = container.find("#dishTitle");
+	this.selectedMenu = container.find("#selected_menu");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.dishPrice.html(model.getTotalMenuPrice());
+	this.dishTitle.html(model.getDishTitle(1));
 
 	model.addObserver(this);
 
