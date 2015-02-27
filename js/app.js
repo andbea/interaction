@@ -6,11 +6,11 @@ $(function() {
 	var firstView = new FirstView($("#firstView"), model);
 	var firstViewController = new FirstViewController(firstView, model);
 
-	var detailsView = new DetailsView($("#detailsView"), model);
-	var detailsViewController = new DetailsViewController(detailsView, model);
- 
 	var menuView = new MenuView($("#menuView"), model);
 	var menuViewController = new MenuViewController(menuView, model);
+
+	var detailsView = new DetailsView($("#detailsView"), model);
+	var detailsViewController = new DetailsViewController(detailsView, model);
 
 	var preperationView = new PreperationView($("#preperationView"), model);
 	var preperationViewController = new PreperationViewController(preperationView, model);
