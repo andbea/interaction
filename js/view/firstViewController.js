@@ -1,6 +1,9 @@
 //ExampleViewController Object constructor
 var FirstViewController = function(view, model) {
  	view.goToMainButton.click(function(){
- 		view.css("display", "none");
+ 		$("#firstView").css("display", "none");
+ 		$("#sidebarView").css("display", "inline");
+ 		$("#banner").css("display", "inline");
+ 		$("#menuView").css("display", "inline");
  	});
 }

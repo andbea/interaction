@@ -1,6 +1,6 @@
 var FirstView = function (container, model) {
 	
-	this.button = container.find("#goToMain");
+	this.goToMainButton = container.find("#goToMain");
 
 	model.addObserver(this);
 }
