@@ -101,6 +101,11 @@ var DinnerModel = function() {
 		return html;
 
 	}
+
+	this.itemSelect = function(id){
+		alert(id);
+	}
+
 	this.populateDishRow = function(row_number) {
 		var html = '';
 		var i;
@@ -111,8 +116,8 @@ var DinnerModel = function() {
 		}
 		for(i = start; i < end; i++) {
 			var text = this.smallDesc(dishes[i]["description"]);
-			html = html + '<div class="col-sm-3">'
-						+	'<div id="menu_block" class="thumbnail" style="cursor: pointer;">' 
+			html = html + '<div id="' + dishes[i].id + '" ' + 'class="col-sm-3" onclick="itemSelect(this.id)" style="cursor: pointer;">'
+						+	'<div id="menu_block" class="thumbnail">'
 						+ 		'<img id="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
 						+ 		'<div class="caption">' 
 						+ 			'<h3>' +  dishes[i]["name"] + '</h3>'

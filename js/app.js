@@ -9,6 +9,9 @@ $(function() {
 	var menuView = new MenuView($("#menuView"), model);
 	var menuViewController = new MenuViewController(menuView, model);
 
+	var sidebarView = new SidebarView($("#sidebarView"), model);
+	var siderbarViewController = new SidebarViewController(sidebarView, model);
+
 	var detailsView = new DetailsView($("#detailsView"), model);
 	var detailsViewController = new DetailsViewController(detailsView, model);
 
