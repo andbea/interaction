@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model) {
+var DetailsViewController = function(view, model) {
  	view.plusButton.click(function(){
  		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
  	});
