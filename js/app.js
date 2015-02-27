@@ -12,7 +12,10 @@ $(function() {
 	var menuView = new MenuView($("#menuView"), model);
 	var menuViewController = new MenuViewController(menuView, model);
 
-	var overviewView = new overviewView($("#overviewView"), model);
-	var overviewViewController = new overviewViewController(menuView, model);
+	var preperationView = new PreperationView($("#preperationView"), model);
+	var preperationViewController = new PreperationViewController(preperationView, model);
+
+	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
+	var dinnerOverviewViewController = new DinnerOverviewViewController(dinnerOverviewView, model);
 });
 
