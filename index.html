@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 
-  </head>
-  <body>
-	<div class="container">
-<!--start of header-->
-		<div class="row" id="banner">
+  	</head>
+<body>
+	<div id="firstView" class="container" style="border-style: solid; position: relative;">
+	  	<div id="bg">
+	  		<img src="images/home.jpg" alt="">
+		</div>
+		<div class="row" id="home_banner" style="position: relative;">
 			<div class="col-md-1"></div>
 			<div class="col-md-3">
 				<h1>HOMELETTE</h1>
@@ -22,235 +24,255 @@
 			<div class="col-md-8" style="padding-top: 3%">
 				<p><i>From the best chefs in the world directly into your kitchen</i></p>
 			</div>
-		</div> 
+		</div>
+		<div class="row">
+			<div class="col-xs-5" id="home_text_box">
+				<h3 id="text_padding">A home dinner service</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
+				</br>
+				<p>Start Quickly</p>
+				<div class="center">
+					<button class="large_btn" id="goToMain">Create new dinner</button>
+				</div>
+			</div>
+			<div class="col-xs-7"></div>
+		</div>
+	</div>
+<!--start of header-->
+	<div class="row" id="banner">
+		<div class="col-md-1"></div>
+		<div class="col-md-3">
+			<h1>HOMELETTE</h1>
+		</div>
+		<div class="col-md-8" style="padding-top: 3%">
+			<p><i>From the best chefs in the world directly into your kitchen</i></p>
+		</div>
+	</div> 
 <!-- end of header --> 
-		<div id="exampleView">
-			<div class="row" id="main">
-			<!--start of side bar-->
-				<div class="col-xs-3" id="sidebarView" >
-					<h3 id="text_padding">Dinner planner</h3>
-						
-						<div class="row" id="text_padding">
-							<div class="col-xs-3" style="margin-top: 5px;">
-								People:
-							</div>
-							<div class="col-xs-2" style="margin-top: 5px;">
-								<p id='numberOfGuests'>0</p>
-							</div>
-							<div class="col-xs-2">
-			          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-							</div>
-							<div class="col-xs-2">
-								<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-							</div>
-							</div>
+	<div class="row" id="main">
+	<!--start of side bar-->
+		<div class="col-xs-3" id="sidebarView">
+			<h3 id="text_padding">Dinner planner</h3>
+			<div class="row" id="text_padding">
+				<div class="col-xs-3" style="margin-top: 5px;">
+					People:
+				</div>
+				<div class="col-xs-2" style="margin-top: 5px;">
+					<p id='numberOfGuests'>0</p>
+				</div>
+				<div class="col-xs-2">
+          			<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+				</div>
+				<div class="col-xs-2">
+					<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+				</div>
+			</div>
 
-						</br>
+			</br>
 
-						<table>
-							<thead>
-								<tr>
-								    <th class="first">Dish</th>
-								    <th>Name</th>
-								    <th>Cost</th>
-								    <th class="last"> </th>
-							  	</tr>
-							</thead>
-							<tbody id="sidebar_content">
+			<table>
+				<thead>
+					<tr>
+					    <th class="first">Dish</th>
+					    <th>Name</th>
+					    <th>Cost</th>
+					    <th class="last"> </th>
+				  	</tr>
+				</thead>
+				<tbody id="sidebar_content">
+				  	<tr>
+				  		<td> </td>
+				  		<td>Pending</td>
+				  		<td>0.00</td>
+				  		<td class="last"></td>
+				  	</tr>
+				</tbody>
+			</table>
+			<hr>
+			<div class="row">
+				<div class="col-xs-6"></div>
+				<div class="col-xs-2">
+					<p>Total: </p>
+				</div>
+				<div class="col-xs-1">
+					<p id="dishPrice">0.00</p>
+				</div>
+				<div class="col-xs-2">
+					<p> SEK</p>
+				</div>
+			</div>
+			</br>
+			<div class="center">
+				<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
+			</div>
+			</br>
+		</div>
+	<!-- end of side bar-->
+	<!--start of main site-->
+		<div class="col-xs-9" id="menuView">
+			<div id="searchbar">
+				<h3 style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 5px;">Select<h3>
+				<hr style="margin: 5px;">
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="input-group">
+					      	<input type="text" class="form-control" placeholder="Search for...">
+					      	<span class="input-group-btn">
+					        	<button class="btn btn-default" type="button">Go!</button>
+					      	</span>
+					    </div><!-- /input-group -->
+					</div>
+					<div class="col-xs-6">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							    Select course
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main course</a></li>
+							    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="menu_table"> </div>
+		</div>
+<!--end of main site-->
+		<div class="col-xs-9" id="detailsView">
+			<div class="row">
+			  	<div class="col-xs-6" style="padding: 30px">
+			  		<h2 id="dishTitle">Lasagne</h2>
+			      	<img src="images/icecream.jpg" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
+			      	<p id="dishDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
+			  	</div>
+			  	<div class="col-xs-6" style="padding-left: 30px; padding-top: 30px;">
+			  		<div id="ingredientsWindow">
+				   	 	<h3>Ingredients for 4 people</h3>
+				   	 	<hr>
+				   	 	<table style="background: none">
+							<tbody id="ingredients_content">
 							  	<tr>
-							  		<td> </td>
-							  		<td>Pending</td>
-							  		<td>0.00</td>
-							  		<td class="last"></td>
+							  		<td id="amount">1/2 tbsp</td>
+							  		<td id="name">Meat</td>
+							  		<td id="currency">SEK</td>
+							  		<td id="price">100.00</td>
 							  	</tr>
 							</tbody>
 						</table>
-						<hr>
-						<div class="row">
-							<div class="col-xs-6"></div>
-							<div class="col-xs-2">
-								<p>Total: </p>
-							</div>
-							<div class="col-xs-1">
-								<p id="dishPrice">0.00</p>
-							</div>
-							<div class="col-xs-2">
-								<p> SEK</p>
-							</div>
-						</div>
-						</br>
-						<div class="center">
-							<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
-						</div>
-						</br>
-				</div>
-			<!-- end of side bar-->
-			<!--start of main site-->
-				<div class="col-xs-9" id="menuView">
-					<div id="searchbar">
-						<h3 style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; margin-top: 5px;">Select<h3>
-						<hr style="margin: 5px;">
-						<div class="row">
-							<div class="col-xs-6">
-								<div class="input-group">
-							      	<input type="text" class="form-control" placeholder="Search for...">
-							      	<span class="input-group-btn">
-							        	<button class="btn btn-default" type="button">Go!</button>
-							      	</span>
-							    </div><!-- /input-group -->
-							</div>
-							<div class="col-xs-6">
-								<div class="dropdown">
-									<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-									    Select course
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-										<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main course</a></li>
-									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="menu_table"> </div>
-				</div>
-		<!--end of main site-->
-				<div class="col-xs-9" id="detailsView">
-					<div class="row">
-					  	<div class="col-xs-6" style="padding: 30px">
-					  		<h2 id="dishTitle">Lasagne</h2>
-					      	<img src="images/icecream.jpg" alt="..." style="margin-top: 10px; margin-bottom: 10px; width: 90%; height: auto">
-					      	<p id="dishDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.</p>
-					  	</div>
-					  	<div class="col-xs-6" style="padding-left: 30px; padding-top: 30px;">
-					  		<div id="ingredientsWindow">
-						   	 	<h3>Ingredients for 4 people</h3>
-						   	 	<hr>
-						   	 	<table style="background: none">
-									<tbody id="ingredients_content">
-									  	<tr>
-									  		<td id="amount">1/2 tbsp</td>
-									  		<td id="name">Meat</td>
-									  		<td id="currency">SEK</td>
-									  		<td id="price">100.00</td>
-									  	</tr>
-									</tbody>
-								</table>
-						   	 	<hr>
-						   	 	<div class="row">
-						   	 		<div class="col-sm-9">
-						   	 			<button class="large_btn" id="confirmDish">Confirm Dish</button>
-						   	 		</div>
-						   	 		<div class="col-sm-3">
-						   	 			<p id="cost">0.00 SEK</p>
-						   	 		</div>
-						   	 	</div>
-						   	 </div>
-					  	</div>
-					</div>
-					<h3>Preperation</h3>
-					<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
-				</div>
+				   	 	<hr>
+				   	 	<div class="row">
+				   	 		<div class="col-sm-9">
+				   	 			<button class="large_btn" id="confirmDish">Confirm Dish</button>
+				   	 		</div>
+				   	 		<div class="col-sm-3">
+				   	 			<p id="cost">0.00 SEK</p>
+				   	 		</div>
+				   	 	</div>
+				   	 </div>
+			  	</div>
 			</div>
-			<div id="dinnerOverviewView" style="padding-bottom:0">
-					<div class="row">
-						<div class="col-sm-3"></div>
-					  	<div class="col-sm-2">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					        		<p>0.00sek</p>
-					      		</div>
+			<h3>Preperation</h3>
+			<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
+		</div>
+		<div id="dinnerOverviewView" style="padding-bottom:0">
+			<div class="row">
+				<div class="col-sm-3"></div>
+			  	<div class="col-sm-2">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="...">
+			      		<div class="caption">
+			       			<h3>Dish name</h3>
+			        		<p>Dish description</p>
+			        		<p>0.00sek</p>
+			      		</div>
 
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-2">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					        		<p>0.00sek</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-2">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="...">
-					      		<div class="caption">
-					       			<h3>Dish name</h3>
-					        		<p>Dish description</p>
-					        		<p>0.00sek</p>
-					      		</div>
-					    	</div>
-					  	</div>
-					  	<div class="col-xs-1" id="total_cost" style= "padding-top:20%" > 
-							<h3 id="text_padding">Total: </h3>
-						</div>
-						<div class="col-xs-1" style= "padding-top:20%" > 
-							<h3 id="dishPrice" style="padding-left: 20px;">0.00</h3>
-						</div>
-						<div class="col-xs-1" style= "padding-top:20%" > 
-							<h3 id="text_padding">SEK</h3>
-						</div>
-					</div>
-					<div class="row" align="center" id="print">
-					<div class="col-xs-12" >
-						<button class="large_btn" id="fullRecipe">Print Full Recipe</button>
-					</div>
+			    	</div>
+			  	</div>
+			  	<div class="col-sm-2">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="...">
+			      		<div class="caption">
+			       			<h3>Dish name</h3>
+			        		<p>Dish description</p>
+			        		<p>0.00sek</p>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="col-sm-2">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="...">
+			      		<div class="caption">
+			       			<h3>Dish name</h3>
+			        		<p>Dish description</p>
+			        		<p>0.00sek</p>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="col-xs-1" id="total_cost" style= "padding-top:20%" > 
+					<h3 id="text_padding">Total: </h3>
+				</div>
+				<div class="col-xs-1" style= "padding-top:20%" > 
+					<h3 id="dishPrice" style="padding-left: 20px;">0.00</h3>
+				</div>
+				<div class="col-xs-1" style= "padding-top:20%" > 
+					<h3 id="text_padding">SEK</h3>
 				</div>
 			</div>
-			<div id="preparationView" style="padding-bottom:0" id="main">
-					<div class="row">
-						<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-3">
-							<p><h2>Meal</h2></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					  	</div>
-					  	<div class="col-sm-6">
-					  		<p><b>Preparation</b></p>
-					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					  	</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-					    	</div>
-					    </div>
-					  	<div class="col-sm-3">
-							<p><h2>Meal</h2></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					  	</div>
-					  	<div class="col-sm-6">
-					  		<p><b>Preparation</b></p>
-					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					  	</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-3">
-					   	 	<div class="thumbnail">
-					      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
-					    	</div>
-					  	</div>
-					  	<div class="col-sm-3">
-							<p><h2>Meal</h2></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					  	</div>
-					  	<div class="col-sm-6">
-					  		<p><b>Preparation</b></p>
-					  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					  	</div>
-					</div>
+			<div class="row" align="center" id="print">
+				<div class="col-xs-12" >
+					<button class="large_btn" id="fullRecipe">Print Full Recipe</button>
 				</div>
-				
+			</div>
+		</div>
+		<div id="preparationView" style="padding-bottom: 0">
+			<div class="row">
+				<div class="col-sm-3">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+			    	</div>
+			  	</div>
+			  	<div class="col-sm-3">
+					<p><h2>Meal</h2></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  	</div>
+			  	<div class="col-sm-6">
+			  		<p><b>Preparation</b></p>
+			  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  	</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+			    	</div>
+			    </div>
+			  	<div class="col-sm-3">
+					<p><h2>Meal</h2></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  	</div>
+			  	<div class="col-sm-6">
+			  		<p><b>Preparation</b></p>
+			  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  	</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+			   	 	<div class="thumbnail">
+			      		<img src="images/icecream.jpg" alt="..." style="width:100px;height:100px">
+			    	</div>
+			  	</div>
+			  	<div class="col-sm-3">
+					<p><h2>Meal</h2></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  	</div>
+			  	<div class="col-sm-6">
+			  		<p><b>Preparation</b></p>
+			  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  	</div>
+			</div>
+		</div>
 	</div>		
 	
 
