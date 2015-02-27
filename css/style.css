@@ -102,6 +102,7 @@ button.large_btn:hover{
 
 #sidebar {
     padding: 0;
+    display: none;
 }
 
 #menu_screen {
