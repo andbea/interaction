@@ -12,13 +12,13 @@ $(function() {
 	var sidebarView = new SidebarView($("#sidebarView"), model);
 	var siderbarViewController = new SidebarViewController(sidebarView, model);
 
-	var detailsView = new DetailsView($("#detailsView"), model);
-	var detailsViewController = new DetailsViewController(detailsView, model);
+	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
+	var dinnerOverviewViewController = new DinnerOverviewViewController(dinnerOverviewView, model);
 
 	var preperationView = new PreperationView($("#preperationView"), model);
 	var preperationViewController = new PreperationViewController(preperationView, model);
 
-	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
-	var dinnerOverviewViewController = new DinnerOverviewViewController(dinnerOverviewView, model);
+	/*var detailsView = new DetailsView($("#detailsView"), model);
+	var detailsViewController = new DetailsViewController(detailsView, model);*/
 });
 

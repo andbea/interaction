@@ -8,12 +8,10 @@ var SidebarView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	this.confirmDinnerButton = container.find("#confirmDinner");
-	this.dishTitle = container.find("#dishTitle");
 	this.selectedMenu = container.find("#selected_menu");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	this.dishPrice.html(model.getTotalMenuPrice());
-	this.dishTitle.html(model.getDishTitle(1));
 
 	model.addObserver(this);
 

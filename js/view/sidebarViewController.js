@@ -9,6 +9,8 @@ var SidebarViewController = function(view, model) {
  	});
 
  	view.confirmDinnerButton.click(function(){
- 		window.location.href = "dinnerOverview.html";
+ 		$("#sidebarView").css("display", "none");
+ 		$("#menuView").css("display", "none");
+ 		$("#dinnerOverviewView").css("display", "block");
  	});
 }
