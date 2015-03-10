@@ -12,7 +12,7 @@ var DinnerModel = function() {
 	var obs_list = [];
 
 	this.addObserver = function(observer) {
-		obs_list.push(observer);	
+		obs_list.push(observer);
 	}
 	this.removeObserver = function() {
 		obs_list.splice(0, 1);	
@@ -21,7 +21,7 @@ var DinnerModel = function() {
 	this.notifyObservers = function(obj) {
 		var i;
 		for	(i = 0; i < obs_list.length; i++) {	
-			obs_list[i].update();
+			obs_list[i].update(obj);
 		}
 	}
 
@@ -116,7 +116,7 @@ var DinnerModel = function() {
 		}
 		for(i = start; i < end; i++) {
 			var text = this.smallDesc(dishes[i]["description"]);
-			html = html + '<div id="' + dishes[i].id + '" ' + 'class="col-sm-3" onclick="itemSelect(this.id)" style="cursor: pointer;">'
+			html = html + '<div id="menu_item_' + dishes[i].id + '" ' + 'class="col-sm-3" style="cursor: pointer;">'
 						+	'<div id="menu_block" class="thumbnail">'
 						+ 		'<img id="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
 						+ 		'<div class="caption">' 
@@ -125,6 +125,7 @@ var DinnerModel = function() {
 						+ 		'</div>'
 						+	'</div>'
 						+ '</div>';
+			this.notifyObservers("menu_item_" + dishes[i].id);
 		}
 		return html;
 	}
