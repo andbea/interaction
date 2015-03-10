@@ -104,7 +104,7 @@
 			</div>
 			</br>
 			<div class="center">
-				<button class="large_btn" id="confirmDinner" disabled>Confirm Dinner</button>
+				<button class="large_btn" id="confirmDinner">Confirm Dinner</button>
 			</div>
 			</br>
 		</div>
@@ -178,6 +178,22 @@
 			<p id="preperationDetails">Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiumsmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venian quis nostrud exercitation ullamco laboris nisi ut aliquauip ex ea commodo consequat.<p>
 		</div>
 		<div id="dinnerOverviewView" style="padding-bottom:0; display: none;">
+			<div class="row" id="home_banner" style="padding: 10px; margin-bottom: 10px">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-1">
+					<p>My Dinner: </p>
+				</div>
+				<div class="col-sm-1">
+					<p id='numberOfGuests'>0</p>
+				</div>
+				<div class="col-sm-2">
+					<p>people</p>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-3">
+					<button  class="large_btn"  id="goToMain">Go back and edit dinner</button>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-sm-3"></div>
 			  	<div class="col-sm-2">
@@ -223,11 +239,28 @@
 			</div>
 			<div class="row" align="center" id="print">
 				<div class="col-xs-12" >
-					<button class="large_btn" id="fullRecipe">Print Full Recipe</button>
+					<button class="large_btn" id="goToPreperation">Print Full Recipe</button>
 				</div>
 			</div>
 		</div>
 		<div id="preperationView" style="padding-bottom:0; display: none;">
+			
+			<div class="row" id="home_banner" style="padding: 10px; margin-bottom: 10px">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-1">
+					<p>My Dinner: </p>
+				</div>
+				<div class="col-sm-1">
+					<p id='numberOfGuests'>0</p>
+				</div>
+				<div class="col-sm-2">
+					<p>people</p>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-3">
+					<button  class="large_btn"  id="goToMain">Go back and edit dinner</button>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-sm-3">
 			   	 	<div class="thumbnail">
@@ -283,19 +316,19 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-	<script src="js/view/detailsView.js"></script>
-	<script src="js/view/detailsViewController.js"></script>
-	<script src="js/view/dinnerOverviewView.js"></script>
-	<script src="js/view/dinnerOverviewViewController.js"></script>
-	<script src="js/view/firstView.js"></script>
-	<script src="js/view/firstViewController.js"></script>
-	<script src="js/view/menuView.js"></script>
-	<script src="js/view/menuViewController.js"></script>
-	<script src="js/view/preperationView.js"></script>
-	<script src="js/view/preperationViewController.js"></script>
+	<script type="application/javascript" src="js/app.js"></script>
+	<script type="application/javascript" src="js/model/dinnerModel.js"></script>
+	<script type="application/javascript" src="js/view/sideBarView.js"></script>
+	<script type="application/javascript" src="js/view/sideBarViewController.js"></script>
+	<script type="application/javascript" src="js/view/detailsView.js"></script>
+	<script type="application/javascript" src="js/view/detailsViewController.js"></script>
+	<script type="application/javascript" src="js/view/dinnerOverviewView.js"></script>
+	<script type="application/javascript" src="js/view/dinnerOverviewViewController.js"></script>
+	<script type="application/javascript" src="js/view/firstView.js"></script>
+	<script type="application/javascript" src="js/view/firstViewController.js"></script>
+	<script type="application/javascript" src="js/view/menuView.js"></script>
+	<script type="application/javascript" src="js/view/menuViewController.js"></script>
+	<script type="application/javascript" src="js/view/preperationView.js"></script>
+	<script type="application/javascript" src="js/view/preperationViewController.js"></script>
   </body>
 </html>

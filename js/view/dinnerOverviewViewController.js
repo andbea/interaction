@@ -1,23 +1,13 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model) {
- 	view.plusButton.click(function(){
- 		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
- 	});
- 
- 	view.minusButton.click(function(){
- 		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
- 	});
+var DinnerOverviewViewController = function(view, model) {
  	view.goToMainButton.click(function(){
- 		window.location.href = "index.html";
- 	});
- 	view.confirmDinnerButton.click(function(){
- 		window.location.href = "dinnerOverview.html";
- 	});
- 	view.goToMainButton.click(function(){
- 		window.location.href = "index.html";
+ 		$("#dinnerOverviewView").css("display", "none");
+ 		$("#sidebarView").css("display", "block");
+ 		$("#menuView").css("display", "block");
  	});
 
- 	view.fullRecipeButton.click(function(){
- 		window.location.href = "preparation.html";
+ 	view.goToPreperationButton.click(function(){
+ 		$("#dinnerOverviewView").css("display", "none");
+ 		$("#preperationView").css("display", "block");
  	});
 }
