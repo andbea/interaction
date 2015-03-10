@@ -28,7 +28,7 @@ var DinnerModel = function() {
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		numberOfGuests = num;
-		this.notifyObservers("");
+		this.notifyObservers("USM");
 		return numberOfGuests;
 	}
 
@@ -53,8 +53,9 @@ var DinnerModel = function() {
 		//TODO Lab 2
 		var i, response = -1;
 		for(i = 0; i < menu.length; i++) {
-			if(dishes[menu[i]]["type"] == type) {
-				response = menu[i];
+			var dish = this.getDish(menu[i]);
+			if(dish["type"] == type) {
+				response = i;
 			}
 		}
 		return response;
@@ -84,7 +85,13 @@ var DinnerModel = function() {
 		//TODO Lab 2
 		var i, price = 0;
 		for(i = 0; i < menu.length; i++) {
-			price = price + this.getDishPrice(menu[i]);
+			var dishPrice = 0, 
+				dish = this.getDish(menu[i]);
+			var ingredients = dish["ingredients"];
+			for(var a = 0; a < ingredients.length; a++) {
+				dishPrice = dishPrice + ingredients[a]["price"];
+			}
+			price = price + dishPrice;
 		}
 		return price;
 	}
@@ -100,10 +107,6 @@ var DinnerModel = function() {
 		}
 		return html;
 
-	}
-
-	this.itemSelect = function(id){
-		alert(id);
 	}
 
 	this.populateDishRow = function(row_number) {
@@ -125,7 +128,77 @@ var DinnerModel = function() {
 						+ 		'</div>'
 						+	'</div>'
 						+ '</div>';
-			this.notifyObservers("menu_item_" + dishes[i].id);
+		}
+		return html;
+	}
+
+	this.filterDishTable = function(filter, filter_source) {
+		var html = '',
+			list = [];
+		for(var a = 0; a < dishes.length; a++) {
+			if(filter_source == 0) {
+				if(dishes[a]["type"] == filter) {
+					list.push(dishes[a]);
+				}
+			}
+			else if(filter_source == 1) {
+				if(dishes[a]["name"].indexOf(filter) > -1) {
+					list.push(dishes[a]);
+				}
+			}
+		}
+		var numberOfRows = Math.ceil(list.length/4);
+		for(var i = 0; i < numberOfRows; i++) {
+			html = html + '<div class="row">' 
+						+ 	this.filterDishRow(i, list) 
+						+ '</div>';
+		}
+		return html;
+
+	}
+
+	this.filterDishRow = function(row_number, list) {
+		var html = '';
+		var i;
+		var start = (row_number*4);
+		var end = (row_number+1)*4;
+		if(end > list.length) {
+			end = list.length;
+		}
+		for(i = start; i < end; i++) {
+			var text = this.smallDesc(list[i]["description"]);
+			html = html + '<div id="menu_item_' + list[i].id + '" ' + 'class="col-sm-3 menuItem" style="cursor: pointer;">'
+						+	'<div id="menu_item_' + list[i].id + '" ' + 'class="thumbnail">'
+						+ 		'<img id="menu_item_' + list[i].id + '" ' + ' class="menu_image" src="images/' + list[i]["image"] + '" alt="...">'
+						+ 		'<div id="menu_item_' + list[i].id + '" ' + ' class="caption">' 
+						+ 			'<h3 id="menu_item_' + list[i].id + '" ' + '>' +  list[i]["name"] + '</h3>'
+						+ 			'<p id="menu_item_' + list[i].id + '" ' + '>' + text + '</p>'
+						+ 		'</div>'
+						+	'</div>'
+						+ '</div>';
+		}
+		return html;
+	}
+
+	this.populateDinnerOverview = function() {
+		var html = '';
+		for(var i = 0; i < menu.length; i++) {
+			var dish = this.getDish(menu[i]);
+			var text = this.smallDesc(dish["description"]);
+			html = html + '<div class="col-sm-4" style="cursor: pointer;">'
+						+	'<div class="thumbnail">'
+						+ 		'<img class="menu_image" src="images/' + dish["image"] + '" alt="...">'
+						+ 		'<div class="caption">' 
+						+ 			'<h3>' +  dish["name"] + '</h3>'
+						+ 			'<p>' + text + '</p>'
+						+ 		'</div>'
+						+	'</div>'
+						+ '</div>';
+		}
+		if(menu.length < 3){
+			for(var i = menu.length; i < 3; i++) {
+				html = html + '<div class="col-sm-4"></div>';
+			}
 		}
 		return html;
 	}
@@ -141,9 +214,9 @@ var DinnerModel = function() {
 				price = price + ingredients[a]["price"];
 			}
 
-			html = html + '<tr>'
-						+	'<td id="dish">' + dish[menu[i]]["id"] +'</td>' 
-						+	'<td id="name">' + dish[menu[i]]["title"] +'</td>' 
+			html = html + '<tr id="selected_menu_Item">'
+						+	'<td id="dish">' + dish["id"] +'</td>' 
+						+	'<td id="name">' + dish["name"] +'</td>' 
 						+	'<td id="price">'+ price +'</td>' 
 						+	'<td>' + 'SEK' +'</td>' 
 						+ '</tr>';
@@ -287,9 +360,11 @@ var DinnerModel = function() {
 		var type = dish["type"];
 		var response = this.getSelectedDish(type);
 		if(response != -1) {
-			this.removeDishFromMenu(response);
+			menu[response] = id;
 		}
-		menu.push(id);
+		else {
+			menu.push(id);
+		}
 		this.notifyObservers("USM");
 	}
 
@@ -520,7 +595,7 @@ var DinnerModel = function() {
 			'price':4
 			}]
 		},{
-		'id':102,
+		'id':103,
 		'name':'MD 4',
 		'type':'main dish',
 		'image':'meatballs.jpg',

@@ -117,9 +117,9 @@
 				<div class="row" style="padding: 10px;">
 					<div class="col-xs-6">
 						<div class="input-group">
-					      	<input type="text" class="form-control" placeholder="Search for...">
+					      	<input id="searchText" type="text" class="form-control" placeholder="Search for...">
 					      	<span class="input-group-btn">
-					        	<button class="btn btn-default" type="button">Go!</button>
+					        	<button id="searchButton" class="btn btn-default" type="button">Go!</button>
 					      	</span>
 					    </div><!-- /input-group -->
 					</div>
@@ -130,8 +130,10 @@
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main course</a></li>
-							    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
+								<li role="presentation"><a id="nofilter" class="filter" role="menuitem" tabindex="-1" style="cursor: pointer;">No Filter</a></li>
+								<li role="presentation"><a id="starter" class="filter" role="menuitem" tabindex="-1" style="cursor: pointer;">Starter</a></li>
+								<li role="presentation"><a id="main dish" class="filter" role="menuitem" tabindex="-1" style="cursor: pointer;">Main course</a></li>
+							    <li role="presentation"><a id="dessert" class="filter" role="menuitem" tabindex="-1" style="cursor: pointer;">Dessert</a></li>
 							</ul>
 						</div>
 					</div>
@@ -196,44 +198,17 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-3"></div>
-		  	<div class="col-sm-2">
-		   	 	<div class="thumbnail">
-		      		<img src="images/icecream.jpg" alt="...">
-		      		<div class="caption">
-		       			<h3>Dish name</h3>
-		        		<p>Dish description</p>
-		        		<p>0.00sek</p>
-		      		</div>
-
-		    	</div>
-		  	</div>
-		  	<div class="col-sm-2">
-		   	 	<div class="thumbnail">
-		      		<img src="images/icecream.jpg" alt="...">
-		      		<div class="caption">
-		       			<h3>Dish name</h3>
-		        		<p>Dish description</p>
-		        		<p>0.00sek</p>
-		      		</div>
-		    	</div>
-		  	</div>
-		  	<div class="col-sm-2">
-		   	 	<div class="thumbnail">
-		      		<img src="images/icecream.jpg" alt="...">
-		      		<div class="caption">
-		       			<h3>Dish name</h3>
-		        		<p>Dish description</p>
-		        		<p>0.00sek</p>
-		      		</div>
-		    	</div>
-		  	</div>
-		  	<div class="col-xs-1" id="total_cost" style= "padding-top:20%" > 
+			<div class="col-sm-6">
+			  	<div id="dinnerOverviewTable" class="row">
+			  	</div>
+			</div>
+		  	<div class="col-sm-1" id="total_cost" style= "padding-top:20%" > 
 				<h3 id="text_padding">Total: </h3>
 			</div>
-			<div class="col-xs-1" style= "padding-top:20%" > 
+			<div class="col-sm-1" style= "padding-top:20%" > 
 				<h3 id="dishPrice" style="padding-left: 20px;">0.00</h3>
 			</div>
-			<div class="col-xs-1" style= "padding-top:20%" > 
+			<div class="col-sm-1" style= "padding-top:20%" > 
 				<h3 id="text_padding">SEK</h3>
 			</div>
 		</div>

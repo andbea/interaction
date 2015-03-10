@@ -6,7 +6,11 @@ var MenuView = function (container, model) {
 
 	this.menuTable.html(model.populateDishTable());
 
+	this.searchButton = container.find("#searchButton");
+	this.searchText = container.find("#searchText");
+
 	this.menuItem = container.find(".menuItem");
+	this.filter = container.find(".filter");
 
 	this.update = function(obj){
 	}
