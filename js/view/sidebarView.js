@@ -8,14 +8,17 @@ var SidebarView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	this.confirmDinnerButton = container.find("#confirmDinner");
-	this.selectedMenu = container.find("#selected_menu");
+	this.selectedMenu = container.find("#sidebar_content");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.dishPrice.html(model.getTotalMenuPrice());
+	this.dishPrice.html(model.getTotalMenuPrice() * model.getNumberOfGuests());
 
 	model.addObserver(this);
 
-	this.update = function(){
+	this.update = function(obj){
 		this.numberOfGuests.html(model.getNumberOfGuests());
+		this.dishPrice.html(model.getTotalMenuPrice() * model.getNumberOfGuests());
+		console.log("getting menu");
+		this.selectedMenu.html(model.populateSelectedMenu());
 	}
 }

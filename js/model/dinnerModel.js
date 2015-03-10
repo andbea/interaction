@@ -84,7 +84,7 @@ var DinnerModel = function() {
 		//TODO Lab 2
 		var i, price = 0;
 		for(i = 0; i < menu.length; i++) {
-			price = price + getDishPrice(menu[i]);
+			price = price + this.getDishPrice(menu[i]);
 		}
 		return price;
 	}
@@ -129,14 +129,31 @@ var DinnerModel = function() {
 		}
 		return html;
 	}
+
+	this.populateSelectedMenu = function() {
+		console.log("hej");
+		var html = "";
+		for(i = 0; i < menu.length; i++) {
+			var price = 0, dish = this.getDish(menu[i]);
+
+			var ingredients = dish["ingredients"];
+			for(a = 0; a < ingredients.length; a++) {
+				price = price + ingredients[i]["price"];
+			}
+
+			html = html + '<tr>'
+						+	'<td id="dish">' + dish[menu[i]]["id"] +'</td>' 
+						+	'<td id="name">' + dish[menu[i]]["title"] +'</td>' 
+						+	'<td id="price">'+ price +'</td>' 
+						+	'<td>' + 'SEK' +'</td>' 
+						+ '</tr>';
+		}
+		return html;
+	}
+
 	this.getIngredientsTable = function(id) {
 		var html = '';
-		var dish;
-		for(key in dishes){
-			if(dishes[key].id == id) {
-				dish = dishes[key];
-			}
-		}
+		var dish = this.getDish(id);
 		var ingredients = dish["ingredients"];
 		var cost = 0;
 		for(var i = 0; i < ingredients.length; i++) {
@@ -150,7 +167,7 @@ var DinnerModel = function() {
 			cost = cost + ingredients[i]["price"];
 		}
 		$("#cost").html(cost.toString() + " SEK");
-		return html;
+		this.notifyObservers("GI1" + html);
 	}
 
 
@@ -223,7 +240,7 @@ var DinnerModel = function() {
 				dish = dishes[key];
 			}
 		}
-		return dish["name"];
+		this.notifyObservers("DT1" + dish["name"]);
 	}
 
 	this.getDishImage = function(id) {
@@ -233,7 +250,12 @@ var DinnerModel = function() {
 				dish = dishes[key];
 			}
 		}
-		return 'images/' + dish["image"];
+		this.notifyObservers("DI1" + 'images/' + dish["image"]);
+	}
+
+
+	this.getDishID = function(id) {
+		this.notifyObservers("ID1" + id);
 	}
 
 	this.getDishDetails = function(id) {
@@ -243,40 +265,32 @@ var DinnerModel = function() {
 				dish = dishes[key];
 			}
 		}
-		return dish["description"];
-	}
-
-	this.populateDishDetails = function() {
-
-	}
-	this.populateMenuPreperation = function() {
-
-	}
-	this.populateOverview = function() {
-
+		this.notifyObservers("DD1" + dish["description"]);
 	}
 
 	this.getDishPrice = function(id) {
-		var i, price = 0;
-		var dish = getDish(id);
+		var i, price = 0, dish = this.getDish(id);
 		var ingredients = dish["ingredients"];
 		for(i = 0; i < ingredients.length; i++) {
 			price = price + ingredients[i]["price"];
 		}
-		return price;
+		this.notifyObservers("DP1" + price);
 	}
+
+
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
-		var dish = getDish(id);
+		var dish = this.getDish(id);
 		var type = dish["type"];
-		var response = getSelectedDish(type);
+		var response = this.getSelectedDish(type);
 		if(response != -1) {
-			removeDishFromMenu(response);
+			this.removeDishFromMenu(response);
 		}
 		menu.push(id);
+		this.notifyObservers("");
 	}
 
 	//Removes dish from menu

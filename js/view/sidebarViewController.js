@@ -11,6 +11,7 @@ var SidebarViewController = function(view, model) {
  	view.confirmDinnerButton.click(function(){
  		$("#sidebarView").css("display", "none");
  		$("#menuView").css("display", "none");
+ 		$("#detailsView").css("display", "none");
  		$("#dinnerOverviewView").css("display", "block");
  	});
 }

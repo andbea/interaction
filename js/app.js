@@ -18,8 +18,8 @@ $(function() {
 	var preperationView = new PreperationView($("#preperationView"), model);
 	var preperationViewController = new PreperationViewController(preperationView, model);
 
-	/*var detailsView = new DetailsView($("#detailsView"), model);
-	var detailsViewController = new DetailsViewController(detailsView, model);*/
+	var detailsView = new DetailsView($("#detailsView"), model);
+	var detailsViewController = new DetailsViewController(detailsView, model);
 
 });
 
