@@ -11,14 +11,16 @@ var SidebarView = function (container, model) {
 	this.selectedMenu = container.find("#sidebar_content");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.dishPrice.html(model.getTotalMenuPrice() * model.getNumberOfGuests());
+	this.dishPrice.html(parseInt(model.getTotalMenuPrice()) * parseInt(model.getNumberOfGuests()));
 
 	model.addObserver(this);
 
 	this.update = function(obj){
 		this.numberOfGuests.html(model.getNumberOfGuests());
-		this.dishPrice.html(model.getTotalMenuPrice() * model.getNumberOfGuests());
-		console.log("getting menu");
-		this.selectedMenu.html(model.populateSelectedMenu());
+		this.dishPrice.html(parseInt(model.getTotalMenuPrice()) * parseInt(model.getNumberOfGuests()));
+		if(obj == "USM"){
+			console.log("Hejs");
+			this.selectedMenu.html(model.populateSelectedMenu());
+		}
 	}
 }

@@ -1,6 +1,7 @@
 var DetailsViewController = function(view, model) {
  	view.confirmDishButton.click(function(){
-		model.addDishToMenu(view.currentDish);
+ 		console.log(parseInt(view.currentDish));
+		model.addDishToMenu(parseInt(view.currentDish));
 	});
  	view.returnButton.click(function(){
  		$("#detailsView").css("display", "none");

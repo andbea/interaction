@@ -131,14 +131,14 @@ var DinnerModel = function() {
 	}
 
 	this.populateSelectedMenu = function() {
-		console.log("hej");
 		var html = "";
 		for(i = 0; i < menu.length; i++) {
-			var price = 0, dish = this.getDish(menu[i]);
+			var price = 0;
+			var dish = this.getDish(menu[i]);
 
 			var ingredients = dish["ingredients"];
 			for(a = 0; a < ingredients.length; a++) {
-				price = price + ingredients[i]["price"];
+				price = price + ingredients[a]["price"];
 			}
 
 			html = html + '<tr>'
@@ -196,12 +196,12 @@ var DinnerModel = function() {
 		return html;
 	}
 
-	this.getMenuPreperation = function(id_list) {
+	this.getMenuPreperation = function() {
 		var html = '';
 		var dish;
 		var id;
-		for(var a = 0; a < id_list.length; a++) {
-			id = id_list[a];
+		for(var a = 0; a < menu.length; a++) {
+			id = menu[a];
 			for(key in dishes){
 				if(dishes[key].id == id) {
 					dish = dishes[key];
@@ -290,7 +290,7 @@ var DinnerModel = function() {
 			this.removeDishFromMenu(response);
 		}
 		menu.push(id);
-		this.notifyObservers("");
+		this.notifyObservers("USM");
 	}
 
 	//Removes dish from menu
