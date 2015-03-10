@@ -116,12 +116,12 @@ var DinnerModel = function() {
 		}
 		for(i = start; i < end; i++) {
 			var text = this.smallDesc(dishes[i]["description"]);
-			html = html + '<div id="menu_item_' + dishes[i].id + '" ' + 'class="col-sm-3" style="cursor: pointer;">'
-						+	'<div id="menu_block" class="thumbnail">'
-						+ 		'<img id="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
-						+ 		'<div class="caption">' 
-						+ 			'<h3>' +  dishes[i]["name"] + '</h3>'
-						+ 			'<p>' + text + '</p>'
+			html = html + '<div id="menu_item_' + dishes[i].id + '" ' + 'class="col-sm-3 menuItem" style="cursor: pointer;">'
+						+	'<div id="menu_item_' + dishes[i].id + '" ' + 'class="thumbnail">'
+						+ 		'<img id="menu_item_' + dishes[i].id + '" ' + ' class="menu_image" src="images/' + dishes[i]["image"] + '" alt="...">'
+						+ 		'<div id="menu_item_' + dishes[i].id + '" ' + ' class="caption">' 
+						+ 			'<h3 id="menu_item_' + dishes[i].id + '" ' + '>' +  dishes[i]["name"] + '</h3>'
+						+ 			'<p id="menu_item_' + dishes[i].id + '" ' + '>' + text + '</p>'
 						+ 		'</div>'
 						+	'</div>'
 						+ '</div>';

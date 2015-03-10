@@ -9,7 +9,7 @@ $(function() {
 	var menuView = new MenuView($("#menuView"), model);
 	var menuViewController = new MenuViewController(menuView, model);
 
-	/*var sidebarView = new SidebarView($("#sidebarView"), model);
+	var sidebarView = new SidebarView($("#sidebarView"), model);
 	var siderbarViewController = new SidebarViewController(sidebarView, model);
 
 	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
