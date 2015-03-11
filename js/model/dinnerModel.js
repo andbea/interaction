@@ -203,6 +203,25 @@ var DinnerModel = function() {
 		return html;
 	}
 
+	this.populatePreperationView = function() {
+		var html = '';
+		for(var i = 0; i < menu.length; i++) {
+			var dish = this.getDish(menu[i]);
+			html = html + '<div class="row">'
+						+ 	'<div class="col-sm-3">'
+						+		'<div class="thumbnail">'
+						+ 			'<img src="images/' + dish["image"] + '" alt="..." style="width:100px;height:100px">'
+						+ 		'</div>'
+						+ 	'</div>'
+						+ 	'<div class="col-sm-9">' 
+						+ 		'<h2>' +  dish["name"] + '</h2>'
+						+ 		'<p>' + dish["description"] + '</p>'
+						+	'</div>'
+						+ '</div>';
+		}
+		return html;
+	}
+
 	this.populateSelectedMenu = function() {
 		var html = "";
 		for(i = 0; i < menu.length; i++) {
